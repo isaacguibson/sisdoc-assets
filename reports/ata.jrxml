@@ -37,13 +37,13 @@
 				<reportElement x="50" y="0" width="50" height="70" uuid="86735dbd-a0d3-4c5b-af66-8a2c357032f0">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["/home/assets/images/brasao_uece.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["/home/ubuntu/assets/images/brasao_uece.jpg"]]></imageExpression>
 			</image>
 			<image hAlign="Center" vAlign="Middle">
 				<reportElement x="455" y="0" width="50" height="71" uuid="681c1a7d-3dbd-4bb1-a5a4-39c5eba3fb3a">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["/home/assets/images/brasao_estado.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["/home/ubuntu/assets/images/brasao_estado.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>
