@@ -12,6 +12,9 @@
 	<parameter name="CONTEUDO" class="java.lang.String"/>
 	<parameter name="LOCAL_E_DATA" class="java.lang.String"/>
 	<parameter name="LIST" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="CARGO_FUNCAO" class="java.lang.String"/>
+	<parameter name="NOME_PRINCIPAL" class="java.lang.String"/>
+	<parameter name="APRESENTACAO" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -37,27 +40,36 @@
 				<reportElement x="50" y="0" width="50" height="70" uuid="86735dbd-a0d3-4c5b-af66-8a2c357032f0">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["/home/ijunior/isaac/documentos/images/brasao_uece.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["/home/ubuntu/assets/images/brasao_uece.jpg"]]></imageExpression>
 			</image>
 			<image hAlign="Center" vAlign="Middle">
 				<reportElement x="455" y="0" width="50" height="71" uuid="681c1a7d-3dbd-4bb1-a5a4-39c5eba3fb3a">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["/home/ijunior/isaac/documentos/images/brasao_estado.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["/home/ubuntu/assets/images/brasao_estado.jpg"]]></imageExpression>
 			</image>
 		</band>
 	</title>
 	<detail>
-		<band height="76" splitType="Stretch">
+		<band height="138" splitType="Stretch">
 			<textField>
 				<reportElement x="8" y="10" width="539" height="20" uuid="7d7da5e1-32d6-42b6-9e8d-f1e329873d7c"/>
-				<textElement textAlignment="Center"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
-				<reportElement x="8" y="50" width="539" height="20" uuid="ed5fd1f1-455f-40b1-9cfc-3fc3eeae8d86"/>
+				<reportElement x="8" y="110" width="539" height="20" uuid="ed5fd1f1-455f-40b1-9cfc-3fc3eeae8d86"/>
 				<textElement textAlignment="Justified" markup="html"/>
 				<textFieldExpression><![CDATA[$P{CONTEUDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="40" width="538" height="60" uuid="513d4b6f-3b8d-4efb-8d94-ac342a16642b"/>
+				<textElement textAlignment="Justified">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{APRESENTACAO}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="130" splitType="Stretch">
@@ -89,4 +101,48 @@
 			</componentElement>
 		</band>
 	</detail>
+	<lastPageFooter>
+		<band height="111">
+			<line>
+				<reportElement x="8" y="50" width="539" height="1" uuid="37f7c7d5-8d2b-4eab-aa2e-27bc40e0db68">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="14" y="60" width="527" height="16" uuid="429b1839-2df6-4adc-a534-a84e19f14a86"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Av. Silas Munguba, 1700 – Campus do Itaperi – Fortaleza/CE – CEP: 60740-903]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="76" width="527" height="16" uuid="ea2174e6-e7de-45c1-988a-02557dbaf6c3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Fone (85) 3101.96.01 – Fax (85) 3101.96.03]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="90" width="527" height="16" uuid="e4d7f5d9-2b25-4b5a-b173-3b462af5977d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Site: www.uece.br]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="14" y="10" width="527" height="20" uuid="1ba7c143-ebd7-4216-81d9-bd268ed09e29"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{NOME_PRINCIPAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="14" y="30" width="527" height="20" uuid="d95d28d3-f24b-48b4-98e2-8f735ad6714a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{CARGO_FUNCAO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="8" y="51" width="539" height="1" uuid="a0629f4c-8f9d-40e0-a6ee-73457e3dfdb3">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="8" y="52" width="539" height="1" uuid="fd2f1897-4c97-4d18-af20-cf6cf20f484e">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</lastPageFooter>
 </jasperReport>
